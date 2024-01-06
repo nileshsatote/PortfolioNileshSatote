@@ -20,10 +20,10 @@ const About = () => {
 
         <br />
 
-      <div className="flex space-x-10 pt-5">
+      <div className="flex space-x-10 pt-5  w-full border border-solid border-black-gray p-5">
 
        <ul>
-       <h1 className="text-4xl ">Core Skill</h1>
+       <h1 className="text-4xl">Core Skill</h1>
     <li>Data Structure</li>
     <li>ALgorithms</li>
     <li>Oops</li>
