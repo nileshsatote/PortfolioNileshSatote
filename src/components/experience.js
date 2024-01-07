@@ -5,6 +5,8 @@ import css from "../components/assets/css.png"
 import javascript from "../components/assets/javascript.png"
 import react from "../components/assets/react.png"
 import github from "../components/assets/github.png"
+import MUI from "../components/assets/mui.jpg"
+import MERN from "../components/assets/mern.jpg"
 import tailwind from "../components/assets/tailwind.png"
 const Experience = () => {
   const techs = [
@@ -46,6 +48,19 @@ const Experience = () => {
        title:"GITHUB",
        style: "shadow-gray-300",
     },
+    {
+      id: 7,
+      src: MUI,
+      title: "MUI",
+      style: "shadow-orange-500",
+    },
+    {
+      id: 8,
+      src: MERN,
+      title: "MERN",
+      style: "shadow-blue-600",
+    },
+   
    
   ];
 

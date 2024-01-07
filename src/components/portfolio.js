@@ -5,27 +5,32 @@ import Novice from '../components/assets/portfolio/novice.jpg'
 import Cicd from '../components/assets/portfolio/cicd.jpg'
 import Pportfolio from '../components/assets/portfolio/portfolio.jpg'
 import Attendo from '../components/assets/portfolio/attendo.jpg'
+import ShopCart from '../components/assets/portfolio/shopcart.jpg'
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: OIP,
-      Name:"Weather App"
+      Name:"Weather App",
+      href:"https://github.com/nileshsatote/WeatherApp"
     },
     {
       id: 2,
       src: Novice,
-      Name:"Novice Trainer"
+      Name:"Novice Trainer",
+      href:''
     },
     {
       id: 3,
       src: Cicd,
-      Name:"CICD"
+      Name:"CICD",
+      href:'https://github.com/nileshsatote/AWS-CI-CD-Demo'
     },
     {
       id: 4,
       src: Pportfolio,
-      Name:"Portfolio"
+      Name:"Portfolio",
+      href:'https://github.com/nileshsatote/PortfolioNileshSatote'
     },
     {
       id: 5,
@@ -34,8 +39,9 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      src: arrayDestruct,
-      Name:"ArrayDestruct"
+      src: ShopCart,
+      Name:"ShopCart",
+      href:'https://github.com/nileshsatote/Shopcart'
     },
   ];
 
@@ -53,7 +59,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, Name}) => (
+          {portfolios.map(({ id, src, Name,href}) => (
             <div key={id} className=" shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -65,9 +71,15 @@ const Portfolio = () => {
                   
                 {Name}
                 </button>
-                <button className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105">
+           
+            <a href={href}>
+
+           
+                <button  className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105" >
                   Code
                 </button>
+            
+       </a>
               </div>
             </div>
           ))}
