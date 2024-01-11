@@ -67,24 +67,26 @@ const Experience = () => {
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
+      className="bg-gradient-to-b from-gray-800 to-black w-full min-h-screen text-white py-12 relative"
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+      <div className="max-w-screen-lg mx-auto p-4">
         <div>
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+          <p className="text-3xl md:text-5xl lg:text-6xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
           </p>
-          <p className="py-6">These are the technologies I've worked with</p>
+          <p className="py-4 md:py-6 text-lg md:text-xl lg:text-2xl">
+            These are the technologies I've worked with
+          </p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8  px-12 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 text-center">
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={`bg-gray-900 text-gray-200 shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 py-4 rounded-lg ${style}`}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{title}</p>
+              <img src={src} alt="" className="w-12 md:w-16 mx-auto mb-2" />
+              <p className="text-xs md:text-sm lg:text-base font-semibold">{title}</p>
             </div>
           ))}
         </div>
